@@ -1,75 +1,40 @@
-# React + TypeScript + Vite
+# 🚀 Avaliação Prática Integrada — Front-End React & TypeScript
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto desenvolvido para a disciplina de Front-End (FFE) — **Turma TecInfo FCS 2026**.
 
-Currently, two official plugins are available:
+## 📌 Sobre o Projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Este repositório contém a implementação dos **Tickets 01, 02 e 03**, cobrindo os conceitos fundamentais de React com TypeScript:
+* **Estado Local e Eventos (`useState`)**: Componentes reativos, contadores e manipulação de eventos.
+* **Componentização e Props Tipadas**: Separação modular de componentes usando interfaces TypeScript.
+* **Desafio Integrado**: Painel interativo em rota única (`App.tsx`) com formulário espelhado, mensagens condicionais e listas dinâmicas com `.map()`.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tecnologias Utilizadas
 
-## Expanding the ESLint configuration
+* **React** + **TypeScript**
+* **Vite**
+* **Git & GitHub** (Versionamento com branches dedicadas)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🌿 Estrutura de Branches (Git Flow)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+| Branch | Descrição |
+| :--- | :--- |
+| `main` | Código consolidado final |
+| `feat/fcs-primeiro-componente-react` | Ticket 01 — Componente reativo e renderização condicional |
+| `feat/fcs-props-typescript` | Ticket 02 — Props tipadas com interfaces TypeScript |
+| `feat/fcs-desafio-integrado-03` | Ticket 03 — Painel integrado em rota única (`App.tsx`) |
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
 
-```
+## 🚀 Como Executar Localmente
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+```bash
+# 1. Instalar dependências
+npm install
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
+# 2. Rodar o servidor de desenvolvimento
+npm run dev
