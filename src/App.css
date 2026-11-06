@@ -1,0 +1,261 @@
+/* Fundo Avermelhado com Iluminação Radial Esbranquiçada */
+body, #root {
+  background-color: #160407;
+  background-image: 
+    radial-gradient(ellipse at 50% 10%, rgba(255, 255, 255, 0.35) 0%, rgba(220, 38, 38, 0.45) 35%, rgba(120, 15, 25, 0.25) 65%, transparent 90%),
+    radial-gradient(circle at 50% 85%, rgba(185, 28, 28, 0.2) 0%, transparent 60%);
+  background-attachment: fixed;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: #f8fafc;
+}
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem 1rem;
+}
+
+/* Card Principal */
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(24, 8, 11, 0.88);
+  border: 1px solid rgba(254, 202, 202, 0.25);
+  border-radius: 24px;
+  padding: 2.5rem 1.8rem;
+  max-width: 880px;
+  width: 100%;
+  box-shadow: 
+    0 20px 50px rgba(0, 0, 0, 0.75),
+    0 0 35px rgba(239, 68, 68, 0.3),
+    inset 0 0 20px rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+}
+
+/* Foto com Moldura Harmonizada com a Imagem (Vermelho, Dourado e Branco) */
+.avatar-wrapper {
+  position: relative;
+  padding: 5px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ef4444, #f59e0b, #ffffff, #dc2626);
+  box-shadow: 
+    0 0 25px rgba(245, 158, 11, 0.45),
+    0 0 15px rgba(239, 68, 68, 0.6);
+  margin-bottom: 1rem;
+}
+
+.profile-avatar {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  display: block;
+  object-fit: cover;
+  background-color: #18181b;
+}
+
+/* Nome (Ajuste de espaço para não cortar topo/base) */
+.profile-name {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin: 0.2rem 0;
+  padding: 0.3rem 0.5rem;
+  line-height: 1.4;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.6);
+}
+
+.profile-badge {
+  display: inline-block;
+  margin-top: 0.2rem;
+  padding: 0.3rem 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #fecdd3;
+  background-color: rgba(244, 63, 94, 0.15);
+  border: 1px solid rgba(244, 63, 94, 0.35);
+  border-radius: 20px;
+}
+
+/* Recado Interativo */
+.recado-box {
+  margin: 1.2rem 0;
+  max-width: 480px;
+  width: 100%;
+}
+
+.recado-text {
+  font-size: 0.95rem;
+  color: #f1f5f9;
+  background: rgba(45, 15, 20, 0.7);
+  border: 1px dashed rgba(254, 202, 202, 0.35);
+  padding: 0.65rem 1.2rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.recado-text:hover {
+  border-color: #f43f5e;
+  background: rgba(60, 20, 27, 0.9);
+}
+
+.recado-edit-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.recado-input {
+  flex: 1;
+  background: #18181b;
+  border: 1px solid #f43f5e;
+  color: #fff;
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  outline: none;
+}
+
+.btn-save {
+  background: #f43f5e;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Botão de Curtidas */
+.likes-container {
+  margin-bottom: 2rem;
+}
+
+.like-button {
+  background: linear-gradient(135deg, #2a0e13, #180608);
+  color: #fff;
+  border: 1px solid rgba(244, 63, 94, 0.4);
+  padding: 0.65rem 1.5rem;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.like-button:hover {
+  transform: translateY(-2px);
+  border-color: #f43f5e;
+  box-shadow: 0 4px 15px rgba(244, 63, 94, 0.35);
+}
+
+/* Colunas Inferiores */
+.bottom-sections {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-top: 2rem;
+}
+
+@media (max-width: 680px) {
+  .bottom-sections {
+    grid-template-columns: 1fr;
+  }
+}
+
+.section-card {
+  background: rgba(30, 10, 14, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.section-title h2 {
+  font-size: 1.1rem;
+  margin: 0;
+  color: #ffffff;
+}
+
+.section-subtitle {
+  font-size: 0.8rem;
+  color: #cbd5e1;
+  margin: 0.3rem 0 1rem 0;
+}
+
+/* Links de Documentação */
+.doc-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.doc-links a {
+  color: #f1f5f9;
+  text-decoration: none;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem 0.85rem;
+  background: rgba(45, 15, 20, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.doc-links a:hover {
+  background: rgba(70, 20, 30, 0.8);
+  border-color: rgba(244, 63, 94, 0.4);
+  color: #fda4af;
+}
+
+.doc-links span {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+/* Redes Sociais */
+.social-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.social-btn {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #f1f5f9;
+  text-decoration: none;
+  background: rgba(45, 15, 20, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.6rem 0.85rem;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.social-btn:hover {
+  background: rgba(70, 20, 30, 0.8);
+  border-color: rgba(244, 63, 94, 0.4);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
